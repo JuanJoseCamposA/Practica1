@@ -1,13 +1,28 @@
+package Practica1;
 
-package practica1;
+import java.util.Scanner;
+
 public class Practica1 {
     public static void main(String[] args) {
-        int Radio;
+        Scanner scanner = new Scanner(System.in);
+        char continuar;
+        
+        do {
+            System.out.println("Ingresa el tamaño del radio: ");
+            int radio = scanner.nextInt();
 
-	System.outprintln("Ingresa el tamaño del radio: ");
-	Scanner radio=new Scanner(System.in);
-	radio=radio.nextInt();
-	double Area=Math.PI*Math.pow(Radio,2);
-	System.out.println("El area del circulo es de: "+Area);
+            double area = Math.PI * Math.pow(radio, 2);
+            double perimetro = 2 * Math.PI * radio;
+
+            System.out.println("El área del círculo es: " + area);
+            System.out.println("El perímetro del círculo es: " + perimetro);
+            System.out.println("¿Quieres calcular otro círculo? (S/N): ");
+            continuar = scanner.next().charAt(0);
+
+        } while (continuar == 'S' || continuar == 's');
+
+        System.out.println("¡Gracias por usar el programa!");
+        scanner.close();
     }
 }
+
