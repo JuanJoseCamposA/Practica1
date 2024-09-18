@@ -8,15 +8,13 @@ public class Practica1 {
         char continuar;
         
         do {
-            int radio = 0;
-
             System.out.println("Ingresa el tamaño del radio: ");
-            radio = scanner.nextInt();
+            int radio = scanner.nextInt();
 
-            double Area = Math.PI * Math.pow(radio, 2);
+            double area = Math.PI * Math.pow(radio, 2);
             double perimetro = 2 * Math.PI * radio;
 
-            System.out.println("El área del círculo es: " + Area);
+            System.out.println("El área del círculo es: " + area);
             System.out.println("El perímetro del círculo es: " + perimetro);
             System.out.println("¿Quieres calcular otro círculo? (S/N): ");
             continuar = scanner.next().charAt(0);
@@ -27,3 +25,4 @@ public class Practica1 {
         scanner.close();
     }
 }
+
